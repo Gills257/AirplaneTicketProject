@@ -4,9 +4,11 @@ The write files will write NBA fantasy point stats to an SQL server.
 The NBAStatsWrite file can be used for any season in NBA history but is slower to run than the NBAStatsWriteActivePlayers which is faster since it only uses active players, not every single player in NBA history, however it is only useful for the current season since it will be missing some player info for retired or injured players.
 The NBAStatsRead file is used to read the data from the SQL server, find the most accurate team size for ranking teams based on player data and finally ranks the teams based on this team size.
 
+The NBAStatsWriteToGoogle is an alternative script that writes a Google Firestore server as opposed to an SQL server.
+
 # Getting Started
 
-Download the Jupyter files and the required software (See Prerequisites). You may need to update the code to make it work for your own SQL server.
+Download the Jupyter files and the required software (See Prerequisites). You may need to update the code to make it work for your own SQL or FireStore server.
 
 # Prerequisites
 
@@ -14,11 +16,14 @@ Required Software:
 
   - Jupyter
   - Any SQL server software (mySQL, XAMP, etc.)
+  - Optional: Google Firebase Account and google-services.json file
   
   # Installation
   
   After downloading the Juptyer files and software, update the part of the python code that contains the SQL server informtation. Update
   the server username, password, name and table name.
+  
+  For Google Firestore update the name of the google-services.json file and add the json file to your working directory.
   
   # Author
   
